@@ -1,5 +1,6 @@
 package com.example.cafeapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -44,6 +45,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun startOrder(view: View){
-        Snackbar.make(view, "Not yet implemented Order functionality", Snackbar.LENGTH_LONG).setAction("Action", null).show()
+        val intent = Intent(this, OrderActivity::class.java)
+        startActivity(intent)
     }
+
 }
